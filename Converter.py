@@ -17,4 +17,4 @@ for index, hex_value in enumerate(hexadecimal_values):
     data.iat[index, 0] = hex_to_double(hex_value)
 
 file_path, extension = os.path.splitext(sys.argv[1])
-data.to_csv(f"{file_path}_converted.{extension}")
+data.to_csv(f"{file_path}_converted.{extension}", header=False, index=False)
